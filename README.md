@@ -4,7 +4,8 @@ A fully working vite starter template for [VanJS](https://vanjs.org) forked from
 
 ### Install
 ```bash
-git clone https://github.com/thednp/vite-starter-vanjs-ssr.git .
+git clone https://github.com/thednp/vite-starter-vanjs-ssr.git my-project
+cd my-project
 ```
 
 ```bash
