@@ -1,0 +1,30 @@
+{
+  "name": "vite-starter-vanjs-ssr",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "author": "thednp",
+  "scripts": {
+    "dev": "node server",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.ts --outDir dist/server",
+    "start": "cross-env NODE_ENV=production node server",
+    "preview": "npm run build && npm run start"
+  },
+  "dependencies": {
+    "compression": "^1.7.5",
+    "express": "^5.0.1",
+    "mini-van-plate": "^0.6.1",
+    "sirv": "^3.0.0",
+    "vanjs-core": "^1.5.2",
+    "vanjs-feather": "^0.0.8"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "cross-env": "^7.0.3",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.3"
+  }
+}
