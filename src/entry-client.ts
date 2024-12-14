@@ -6,14 +6,14 @@ import App from "./app.ts";
 
 registerEnv({ van });
 
-const root = document.getElementById('app') as HTMLElement;
+const root = document.getElementById("app") as HTMLElement;
 
 if (!root.innerHTML.length) {
-    van.add(root, App());
+  van.add(root, App());
 } else {
-    van.hydrate(root, (dom) => {
-        dom.innerHTML = '';
-        dom.append(App());
-        return dom;
-    });
+  van.hydrate(root, (dom) => {
+    dom.innerHTML = "";
+    dom.append(App());
+    return dom;
+  });
 }
