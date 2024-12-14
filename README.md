@@ -8,11 +8,11 @@ git clone https://github.com/thednp/vite-starter-vanjs-ssr.git .
 ```
 
 ```bash
-pnpm install
+npm install
 ```
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Development
