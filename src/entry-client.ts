@@ -12,8 +12,6 @@ if (!root.innerHTML.length) {
     van.add(root, App());
 } else {
     van.hydrate(root, (dom) => {
-        // console.log(dom);
-        // console.log(App());
         dom.innerHTML = '';
         dom.append(App());
         return dom;
