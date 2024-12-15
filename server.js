@@ -18,17 +18,10 @@ const templateHtml = isProduction
   : "";
 
 // Cached production manifest
-const manifestFile = [
-  "dist/client/.vite/ssr-manifest.json",
-  "dist/static/.vite/ssr-manifest.json",
-].find(
-  (f) => fss.existsSync(resolve(f)),
-);
-
 const manifest = isProduction
   ? JSON.parse(
     await fs.readFile(
-      resolve(manifestFile),
+      resolve("dist/client/.vite/ssr-manifest.json"),
       "utf-8",
     ),
   )
