@@ -4,7 +4,6 @@ A fully working vite starter template for [VanJS](https://vanjs.org) forked from
 
 ### Install
 Clone the repository from Github.
-
 ```bash
 git clone https://github.com/thednp/vite-starter-vanjs-ssr.git my-project
 cd my-project
@@ -21,7 +20,6 @@ pnpm install
 
 
 ### Development
-
 Start the development server.
 ```bash
 npm run dev
@@ -32,7 +30,6 @@ pnpm dev
 ```
 
 ### Preview
-
 Prerender the application and start the server.
 ```bash
 npm run preview
@@ -44,7 +41,6 @@ pnpm preview
 
 
 ### Build a Static Application
-
 Prerender the application.
 ```bash
 npm run generate
@@ -57,7 +53,6 @@ npm run start
 
 
 ### Build a Server-Side Rendering Application
-
 Build the application.
 ```bash
 npm run build
