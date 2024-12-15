@@ -19,6 +19,7 @@ npm install
 pnpm install
 ```
 
+
 ### Development
 
 Start the development server.
@@ -32,7 +33,7 @@ pnpm dev
 
 ### Preview
 
-Preview the built.
+Prerender the application and start the server.
 ```bash
 npm run preview
 ```
@@ -41,7 +42,8 @@ npm run preview
 pnpm preview
 ```
 
-### Build a static application
+
+### Build a Static Application
 
 Prerender the application.
 ```bash
@@ -52,6 +54,7 @@ Start the application.
 ```bash
 npm run start
 ```
+
 
 ### Build a Server-Side Rendering Application
 
@@ -68,7 +71,7 @@ npm run start
 
 ### Other Notes
 * you are expected to create pages in the `src/pages` folder in order for the prerenderer to work;
-* for more information about SSR, highly recommand to check the [Vite documentation](https://vite.dev/guide/ssr.html).
+* for more information about SSR, it's highly recommand to check the [Vite documentation](https://vite.dev/guide/ssr.html).
 
 
 ### License
