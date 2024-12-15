@@ -44,5 +44,5 @@ const routesToPrerender = fs.existsSync(toAbsolute("src/pages"))
   }
 
   // done, delete .vite directory including ssr manifest
-  //   fs.rmSync(toAbsolute('dist/static/.vite'), { recursive: true })
+  fs.rmSync(toAbsolute('dist/static/.vite'), { recursive: true })
 })();

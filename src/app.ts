@@ -7,11 +7,23 @@ export const App = () => {
   return div(
     a(
       { href: "https://vite.dev", target: "_blank" },
-      img({ src: "/vite.svg", class: "logo", alt: "Vite logo", width: 96, height: 96 }),
+      img({
+        src: "/vite.svg",
+        class: "logo",
+        alt: "Vite logo",
+        width: 96,
+        height: 96,
+      }),
     ),
     a(
       { href: "https://vanjs.org", target: "_blank" },
-      img({ src: "/vanjs.svg", class: "logo vanilla", alt: "VanJS logo", width: 96, height: 96 }),
+      img({
+        src: "/vanjs.svg",
+        class: "logo vanilla",
+        alt: "VanJS logo",
+        width: 96,
+        height: 96,
+      }),
     ),
     h1(
       "Hello VanJS!",

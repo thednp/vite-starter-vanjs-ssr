@@ -12,7 +12,10 @@ const Head = () => {
   const { title, meta } = van.tags;
   return [
     title("Vite + VanJS Starter Template"),
-    meta({ name: "description", content: "Starter template for VanJS + Vite with Server-Side Rendering" }),
+    meta({
+      name: "description",
+      content: "Starter template for VanJS + Vite with Server-Side Rendering",
+    }),
   ];
 };
 
