@@ -17,8 +17,7 @@
     "express": "^5.0.1",
     "mini-van-plate": "^0.6.1",
     "sirv": "^3.0.0",
-    "vanjs-core": "^1.5.2",
-    "vanjs-feather": "^0.0.8"
+    "vanjs-core": "^1.5.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
