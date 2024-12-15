@@ -59,7 +59,7 @@ h1 {
 }
 
 .read-the-docs {
-  color: #888;
+  color: #999;
 }
 
 button {
@@ -91,5 +91,8 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+  .read-the-docs {
+    color: #333;
   }
 }
