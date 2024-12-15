@@ -2,6 +2,7 @@
 import van from "mini-van-plate/van-plate";
 import { registerEnv } from "mini-van-plate/shared";
 import { renderPreloadLinks } from "./server-util/renderPreloadLinks.ts";
+import { renderToHTML } from "./server-util/renderToHTML.ts";
 
 import App from "./app.ts";
 
@@ -16,8 +17,8 @@ const Head = () => {
 };
 
 export function render(_url: string, manifest: Record<string, string[]>) {
-  const head = Head().map((el) => el.render()).join("\n    ");
-  const html = App().render();
+  const head = renderToHTML(Head());
+  const html = renderToHTML(App());
   const preloadLinks = renderPreloadLinks(Object.keys(manifest), manifest);
   return { html, head, preloadLinks };
 }
