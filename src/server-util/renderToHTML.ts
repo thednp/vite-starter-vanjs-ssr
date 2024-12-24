@@ -2,10 +2,6 @@ import { type Element as VanElement, type TagFunc } from "mini-van-plate/van-pla
 
 type Source = number | string | VanElement | VanElement[] | TagFunc | undefined;
 
-export const Fragment = (children: (Source | (() => Source))): VanElement => {
-  return { render: () => renderToHTML(children)};
-};
-
 export function renderToHTML(
   source: Source | (() => Source),
 ): string {
