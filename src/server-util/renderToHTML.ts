@@ -1,4 +1,4 @@
-import type{ Element as VanElement, TagFunc } from "mini-van-plate/van-plate";
+import type { Element as VanElement, TagFunc } from "mini-van-plate/van-plate";
 
 type Source = number | string | VanElement | VanElement[] | TagFunc | undefined;
 
