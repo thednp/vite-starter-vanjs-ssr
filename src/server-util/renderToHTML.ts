@@ -1,4 +1,4 @@
-import { type Element as VanElement, type TagFunc } from "mini-van-plate/van-plate";
+import type{ Element as VanElement, TagFunc } from "mini-van-plate/van-plate";
 
 type Source = number | string | VanElement | VanElement[] | TagFunc | undefined;
 
@@ -17,6 +17,7 @@ export function renderToHTML(
   if (typeof source === "object" && "render" in source) {
     return source.render();
   }
+
   if (Array.isArray(source)) {
     const elements = [];
     for (const el of source) {
@@ -27,6 +28,6 @@ export function renderToHTML(
 
   // no source provided
   // @ts-ignore - this is server side code
-  console.warn("Vite Plugin VanJS: source not recognized:" + source);
+  console.warn("Render error: source not recognized: " + source);
   return "";
 }

@@ -4,7 +4,7 @@ import "./app.css";
 
 export const App = () => {
   const { div, h1, img, p, a } = van.tags;
-  return div(
+  return [
     a(
       { href: "https://vite.dev", target: "_blank" },
       img({
@@ -33,7 +33,7 @@ export const App = () => {
       { class: "read-the-docs" },
       "Click on the Vite logo or the VanJS logo to learn more",
     ),
-  );
+  ];
 };
 
 export default App;

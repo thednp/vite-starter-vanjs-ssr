@@ -1,8 +1,7 @@
 // entry-server.ts
+import type { TagFunc } from "mini-van-plate/van-plate";
 import { renderPreloadLinks } from "./server-util/renderPreloadLinks.ts";
 import { renderToHTML } from "./server-util/renderToHTML.ts";
-import type { TagFunc } from "mini-van-plate/van-plate";
-
 import App from "./app.ts";
 
 export async function render(_url: string, manifest: Record<string, string[]>) {

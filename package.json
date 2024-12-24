@@ -20,7 +20,7 @@
     "sirv": "^3.0.0",
     "vanjs-core": "^1.5.2",
     "vanjs-ext": "^0.6.2",
-    "vite-plugin-vanjs": "github:thednp/vite-plugin-vanjs"
+    "vite-plugin-vanjs": "^0.0.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
