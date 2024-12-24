@@ -1,6 +1,6 @@
-import { type Element as VanElement } from "mini-van-plate/van-plate";
+import { type Element as VanElement, type TagFunc } from "mini-van-plate/van-plate";
 
-type Source = number | string | VanElement | VanElement[] | Element | undefined;
+type Source = number | string | VanElement | VanElement[] | TagFunc | undefined;
 
 export const Fragment = (children: (Source | (() => Source))): VanElement => {
   return { render: () => renderToHTML(children)};
@@ -21,15 +21,12 @@ export function renderToHTML(
   if (typeof source === "object" && "render" in source) {
     return source.render();
   }
-  if (source instanceof Element) {
-    return source.outerHTML;
-  }
   if (Array.isArray(source)) {
     const elements = [];
     for (const el of source) {
       elements.push(renderToHTML(el));
     }
-    return elements.join("\n    ");
+    return elements.join("");
   }
 
   // no source provided
