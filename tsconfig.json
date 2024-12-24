@@ -18,10 +18,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-    "allowJs": true,
-    "jsx": "preserve",
-    "jsxImportSource": "@vanjs/jsx"
+    "allowJs": true
   },
   "include": ["src"]
 }
