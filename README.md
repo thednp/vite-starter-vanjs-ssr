@@ -23,6 +23,10 @@ npm install
 pnpm install
 ```
 
+```bash
+deno install
+```
+
 
 ### Development
 Start the development server.
@@ -32,6 +36,10 @@ npm run dev
 
 ```bash
 pnpm dev
+```
+
+```bash
+deno task dev
 ```
 
 ### Preview
@@ -44,6 +52,9 @@ npm run preview
 pnpm preview
 ```
 
+```bash
+deno task preview
+```
 
 ### Build a Static Application
 Prerender the application.
@@ -71,7 +82,7 @@ npm run start
 
 ### Other Notes
 * you are expected to create pages in the `src/pages` folder in order for the prerenderer to work;
-* for more information about SSR, it's highly recommand to check the [Vite documentation](https://vite.dev/guide/ssr.html).
+* for more information about SSR, it's highly recommanded to check the [Vite documentation](https://vite.dev/guide/ssr.html).
 
 
 ### License
