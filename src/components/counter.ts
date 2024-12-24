@@ -1,8 +1,8 @@
-import { env } from "mini-van-plate/shared";
+import van from "@vanjs/van"
 
 const Counter = () => {
-  const { button } = env.van.tags;
-  const counter = env.van.state(0);
+  const { button } = van.tags;
+  const counter = van.state(0);
   return (
     button({ onclick: () => ++counter.val }, "Counter: ", counter)
   );

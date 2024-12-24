@@ -1,9 +1,9 @@
-import { env } from "mini-van-plate/shared";
+import van from "@vanjs/van";
 import Counter from "./components/counter";
 import "./app.css";
 
 export const App = () => {
-  const { div, h1, img, p, a } = env.van.tags;
+  const { div, h1, img, p, a } = van.tags;
   return div(
     a(
       { href: "https://vite.dev", target: "_blank" },

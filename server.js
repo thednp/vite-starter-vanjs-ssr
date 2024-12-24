@@ -1,13 +1,12 @@
 // server.js
 import fs from "node:fs/promises";
-import fss from "node:fs";
 import path from "node:path";
 import url from "node:url";
 import express from "express";
 
 // Constants
 const isProduction = process.env.NODE_ENV === "production";
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5173;
 const base = process.env.BASE || "/";
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const resolve = (p) => path.resolve(__dirname, p);

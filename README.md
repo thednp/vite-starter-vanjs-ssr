@@ -1,6 +1,11 @@
 ## vite-starter-vanjs-ssr
 A fully working vite starter template for [VanJS](https://vanjs.org) forked from [template-ssr-vanilla-ts](https://github.com/bluwy/create-vite-extra/tree/master/template-ssr-vanilla-ts).
 
+**Features**:
+* SSR server powered by express;
+* SSG prerender script included;
+* isomorphic render powered by [vite-plugin-vanjs](https://github.com/thednp/vite-plugin-vanjs).
+
 
 ### Install
 Clone the repository from Github.
