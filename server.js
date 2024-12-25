@@ -6,6 +6,7 @@ import express from "express";
 
 // Constants
 const isProduction = process.env.NODE_ENV === "production";
+const isStatic = process.env.STATIC === "true";
 const port = process.env.PORT || 5173;
 const base = process.env.BASE || "/";
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
@@ -13,7 +14,7 @@ const resolve = (p) => path.resolve(__dirname, p);
 
 // Cached production assets
 const templateHtml = isProduction
-  ? await fs.readFile("./dist/client/index.html", "utf-8")
+  ? await fs.readFile(`./dist/${isStatic ? "static" : "client"}/index.html`, "utf-8")
   : "";
 
 // Cached production manifest
@@ -66,12 +67,15 @@ app.use("*all", async (req, res) => {
       render = (await import("./dist/server/entry-server.js")).render;
     }
 
-    const rendered = await render(url, manifest);
+    let html = templateHtml;
 
-    const html = template
-      .replace(`<!--preload-links-->`, rendered.preloadLinks ?? "")
-      .replace(`<!--app-head-->`, rendered.head ?? "")
-      .replace(`<!--app-html-->`, rendered.html ?? "");
+    if (!isStatic) {
+      const rendered = await render(url, manifest);
+      html = template
+        .replace(`<!--preload-links-->`, rendered.preloadLinks ?? "")
+        .replace(`<!--app-head-->`, rendered.head ?? "")
+        .replace(`<!--app-html-->`, rendered.html ?? "");
+    }
 
     res.status(200).set({ "Content-Type": "text/html" }).send(html);
   } catch (e) {
@@ -83,5 +87,5 @@ app.use("*all", async (req, res) => {
 
 // Start http server
 app.listen(port, () => {
-  console.log(`Server started at http://localhost:${port}`);
+  console.log(`Server ${isStatic ? "SSG" : "SSR"} mode started at http://localhost:${port}`);
 });
