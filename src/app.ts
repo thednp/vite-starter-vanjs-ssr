@@ -1,4 +1,4 @@
-import van from "@vanjs/van";
+import van from "vanjs-core";
 import Counter from "./components/counter";
 import "./app.css";
 
